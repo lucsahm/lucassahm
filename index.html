@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ligar seu arquivo CSS -->
+</head>
+<body>
+    <header>
+        <h1>Meu Portfólio</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#educacao">Educação e Idiomas</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Aqui você pode escrever sobre você, seus hobbies, interesses, experiências e qualquer informação relevante.</p>
+    </section>
+
+    <section id="educacao">
+        <h2>Educação e Idiomas</h2>
+        <p>Descreva sua formação educacional, habilidades linguísticas e quaisquer certificados ou diplomas que você possui.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <p>Mostre seus trabalhos anteriores, projetos pessoais, links para outros sites que você tenha feito e qualquer coisa que deseje destacar.</p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato comigo preenchendo o formulário abaixo:</p>
+        <form action="processar_formulario.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Meu Portfólio</p>
+    </footer>
+</body>
+</html>
