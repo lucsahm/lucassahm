@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,30 +11,30 @@
         <h1>Meu Portfólio</h1>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#educacao">Educação e Idiomas</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#" onclick="mostrarSecao('sobre')">Sobre Mim</a></li>
+                <li><a href="#" onclick="mostrarSecao('educacao')">Educação e Idiomas</a></li>
+                <li><a href="#" onclick="mostrarSecao('portfolio')">Portfólio</a></li>
+                <li><a href="#" onclick="mostrarSecao('contato')">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="sobre">
+    <section id="sobre" style="display: none;">
         <h2>Sobre Mim</h2>
         <p>Aqui você pode escrever sobre você, seus hobbies, interesses, experiências e qualquer informação relevante.</p>
     </section>
 
-    <section id="educacao">
+    <section id="educacao" style="display: none;">
         <h2>Educação e Idiomas</h2>
         <p>Descreva sua formação educacional, habilidades linguísticas e quaisquer certificados ou diplomas que você possui.</p>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" style="display: none;">
         <h2>Portfólio</h2>
         <p>Mostre seus trabalhos anteriores, projetos pessoais, links para outros sites que você tenha feito e qualquer coisa que deseje destacar.</p>
     </section>
 
-    <section id="contato">
+    <section id="contato" style="display: none;">
         <h2>Contato</h2>
         <p>Entre em contato comigo preenchendo o formulário abaixo:</p>
         <form action="processar_formulario.php" method="post">
@@ -54,5 +54,18 @@
     <footer>
         <p>&copy; 2023 Meu Portfólio</p>
     </footer>
+
+    <script>
+        function mostrarSecao(id) {
+            var secoes = document.querySelectorAll('section');
+            for (var i = 0; i < secoes.length; i++) {
+                secoes[i].style.display = 'none';
+            }
+            var secao = document.getElementById(id);
+            if (secao) {
+                secao.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
